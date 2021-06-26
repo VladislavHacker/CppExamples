@@ -153,7 +153,7 @@ public:
     }
 
     WeakPtr& operator=(const WeakPtr<T>& other) {
-        if (&other != *this) {
+        if (&other != this) {
             ptr = other.ptr;
             shared_counter = other.shared_counter;
             weak_counter = other.weak_counter;
